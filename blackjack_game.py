@@ -1,9 +1,9 @@
 # Mini-project #6 - Blackjack
+# coursera link: http://www.codeskulptor.org/#user38_Vxlgdrltci4G7LJ_5.py
+
 
 import simplegui
 import random
-
-# coursera link: http://www.codeskulptor.org/#user38_Vxlgdrltci4G7LJ_4.py
 
 # load card sprite - 936x384 - source: jfitz.com
 CARD_SIZE = (72, 96)
@@ -24,6 +24,8 @@ SUITS = ('C', 'S', 'H', 'D')
 RANKS = ('A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K')
 VALUES = {'A':1, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':10, 'Q':10, 'K':10}
 
+def card_to_tuple(card):
+    return tuple(card)
 
 # define card class
 class Card:
@@ -60,14 +62,14 @@ class Hand:
     def __str__(self):
         return "cards: "+str(self.cards)+" state: "+str(self.state)+"value: "+str(self.value)
 #
-    def add_card(self, card):
+    def add_card(self,card):
         self.cards.append(card)	# add a card object to a hand
 #
-    def set_value(self,cards):
+    def set_value(self):
         # count aces as 1, if the hand has an ace, then add 10 to hand value if it doesn't bust
         # compute the value of the hand, see Blackjack video
         value = 0
-        for card in cards:
+        for card in self.cards:
             card = card_to_tuple(card)
             value += VALUES[card[0]]
             if card[0]=="A" and value+10 < 21:
@@ -126,18 +128,15 @@ print mydeck
 
 # 
 def new_game():
-    global deck, player_hand, dealer_hand, outcome, in_play
+    global deck, hand, outcome, in_play
     deck=Deck()
+    hand=Hand()
     deck.shuffle()
     in_play = True
-    print "Game on"
+    print "Game on" 
     
 # define event handlers for buttons
 def deal():
-    """global outcome, in_play
-    # your code goes here
-    in_play = True
-    """
     global deck, hand
     hand.add_card(deck.cards.pop())
     
@@ -179,7 +178,6 @@ def hit():  # player button handler?
         print outcome
     else:
         print score
-        pass
     
 def stand():  # player button handler?
     global hand, in_play, score   
@@ -192,6 +190,7 @@ def stand():  # player button handler?
     hand.set_value()
     while in_play:
         score = hand.get_value()
+        # No '21' so calculate the winner:
         if score == 21:
             outcome = "*** DEALER WINS ***! "
             print outcome
@@ -202,9 +201,7 @@ def stand():  # player button handler?
             deal()
             hand.set_value()
         in_play = True
-    # No '21' so calculate the winner:
-     
-        
+          
     # if hand value = '21', assign a message to outcome, start new game 
     else:
         in_play = False
@@ -218,7 +215,6 @@ def draw(canvas):
     card = Card("S", "A")
     card.draw(canvas, [300, 300])
 
-
 # initialization frame
 frame = simplegui.create_frame("Blackjack", 600, 600)
 frame.set_canvas_background("Green")
@@ -229,7 +225,6 @@ frame.add_button("Hit",  hit, 200)
 frame.add_button("Stand", stand, 200)
 frame.set_draw_handler(draw)
 
-
 # get things rolling
 new_game()
 #deal()
@@ -237,12 +232,6 @@ frame.start()
 
 
 # remember to review the gradic rubricdef new_game():
-
-    
-
-
-
-
 
     
 
