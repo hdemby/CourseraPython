@@ -1,5 +1,7 @@
 import random
 
+# current: http://www.codeskulptor.org/#user38_Vxlgdrltci4G7LJ_2.py
+
 # initialize some useful global variables
 in_play = False
 outcome = ""
@@ -119,8 +121,12 @@ def deal():
 test="""
 deck=Deck(); deck.shuffle(); print deal()
 hand=Hand()
+hand.add_card(deal())
+hand.set_value()
 while True:
+    print hand
     if raw_input("Hit or stand?[H,s] ") in ('s','S'):
+        print "Standing with hand >",hand
         break
     else:
         hand.add_card(deal())
@@ -131,12 +137,8 @@ while True:
             break
         elif hand.get_value() == 21:
             print "WINNER!! ",
-            print "ended with hand : ",hand
+            print "ended with hand > ",hand
             break
-    print hand
-
-
-
 """
 
 def hit():  # player button handler?
