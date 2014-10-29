@@ -1,5 +1,5 @@
 # Mini-project #6 - Blackjack
-# coursera link: http://www.codeskulptor.org/#user38_Vxlgdrltci4G7LJ_5.py
+# coursera link: http://www.codeskulptor.org/#user38_Vxlgdrltci4G7LJ_8.py
 
 
 import simplegui
@@ -172,16 +172,17 @@ def hit():  # player button handler?
     # if busted, assign a message to outcome, update 'in_play', score, and start new game
     if score > 21:
         outcome = "!!! BUST !!! "
+        print outcome
     # if hand value = '21', assign a message to outcome, start new game
     elif score == 21:
         outcome = "*** PLAYER WINS ***! "
         print outcome
     else:
-        print score
+        print score," : ",
     
 def stand():  # player button handler?
     global hand, in_play, score   
-    score = hand.get_value(hand.set_value())
+    player = hand.get_value()
     in_play = True
     # if hand is in play, dealer plays:
     # repeatedly hit dealer until his hand has value 17 or more:
@@ -190,22 +191,28 @@ def stand():  # player button handler?
     hand.set_value()
     while in_play:
         score = hand.get_value()
-        # No '21' so calculate the winner:
+        # if hand value = '21', assign a message to outcome, start new game
         if score == 21:
             outcome = "*** DEALER WINS ***! "
             print outcome
             in_play = False
+        # dealer must stand; ends turn
         elif score > 17:
             in_play = False
+        # continue with deal:
         else:
             deal()
             hand.set_value()
         in_play = True
-          
-    # if hand value = '21', assign a message to outcome, start new game 
+    # No '21' so calculate the winner:
+    dealer = hand.get_value()
+    if player > dealer:
+        outcome = "Player wins"
     else:
-        in_play = False
-        
+        outcome = "Tie: Dealer wins"
+    if player==dealer:
+        outcome = "Tie: "+ outcome 
+    print outcome    
     # assign a message to outcome, update in_play and score
     
 # draw handler    
@@ -232,7 +239,6 @@ frame.start()
 
 
 # remember to review the gradic rubricdef new_game():
-
     
 
 
