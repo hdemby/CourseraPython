@@ -115,13 +115,13 @@ print mydeck
 
 #define event handlers for buttons
 def deal():
-    global deck
-    return deck.cards.pop()
+    global deck, hand
+    hand.add_card(deck.cards.pop())
 
 test="""
 deck=Deck(); deck.shuffle(); print deal()
 hand=Hand()
-hand.add_card(deal())
+deal()
 hand.set_value()
 while True:
     print hand
@@ -129,7 +129,8 @@ while True:
         print "Standing with hand >",hand
         break
     else:
-        hand.add_card(deal())
+        deal()
+        print hand
         hand.set_value()
         if hand.get_value() > 21:
             print "BUST: ",
@@ -142,23 +143,47 @@ while True:
 """
 
 def hit():  # player button handler?
-    global outcome, hand, inplay, score
-    pass	# replace with your code below
- 
-    # if the hand is in play, hit the player
-    if not in_play:
-       deal()
-    # if busted, assign a message to outcome, update in_play and score
-       
-def stand():  # player button handler?
-    global hand, in_play
+    "if the hand is in play, hit the player"
+    global outcome, hand, in_play, score
+    deal()
+    hand.set_value()
+    # if busted, assign a message to outcome, update 'in_play', score, and start new game
+    if hand.get_value() > 21:
+        outcome = "!!! BUST !!! "
+    # if hand value = '21', assign a message to outcome, start new game
+    elif hand.get_value() == 21:
+        outcome = "*** PLAYER WINS ***! "
+        print outcome
+    else:
+        pass 
     
+def stand():  # player button handler?
+    global hand, in_play, score    
     player_hand = hand
     in_play = True
-    # if hand is in play, repeatedly hit dealer until his hand has value 17 or more
+    # if hand is in play, dealer plays:
+    # repeatedly hit dealer until his hand has value 17 or more:
+    hand=Hand()
+    deal()
+    while in_play:
+        if hand.get_value() == 21:
+            outcome = "*** DEALER WINS ***! "
+            print outcome
+            in_play = False
+        elif hand.get_value() > 17:
+            in_play = False
 
+        else:
+            deal()
+    # No '21' so calculate the winner:
+            
+        
+    # if hand value = '21', assign a message to outcome, start new game 
+    else:
+        in_play = False
+        
     # assign a message to outcome, update in_play and score
-    in_play = False
+    
 
 def new_game():
     global deck, player_hand, dealer_hand, outcome, in_play
