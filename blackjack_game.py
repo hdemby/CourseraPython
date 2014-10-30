@@ -1,6 +1,12 @@
 # Mini-project #6 - Blackjack
 # coursera link: http://www.codeskulptor.org/#user38_Vxlgdrltci4G7LJ_8.py
 
+# almost working but withou proper 'Card' object:
+# http://www.codeskulptor.org/#user38_WaqPe0IJoc_0.py
+# http://www.codeskulptor.org/#user38_hJfKtRWpcnuhJzT_1.py
+# http://www.codeskulptor.org/#user38_hJfKtRWpcnuhJzT_6.py : mostly working
+# http://www.codeskulptor.org/#user38_hJfKtRWpcnuhJzT_8.py : basic card display working
+# http://www.codeskulptor.org/#user38_hJfKtRWpcnuhJzT_11.py : cards dissapear at the end
 
 import simplegui
 import random
@@ -37,20 +43,27 @@ class Card:
             self.suit = None
             self.rank = None
             print "Invalid card: ", suit, rank
-
+#
     def __str__(self):
         return self.suit + self.rank
-
+#
     def get_suit(self):
         return self.suit
-
+#
     def get_rank(self):
         return self.rank
-
+#
     def draw(self, canvas, pos):
         card_loc = (CARD_CENTER[0] + CARD_SIZE[0] * RANKS.index(self.rank), 
                     CARD_CENTER[1] + CARD_SIZE[1] * SUITS.index(self.suit))
         canvas.draw_image(card_images, card_loc, CARD_SIZE, [pos[0] + CARD_CENTER[0], pos[1] + CARD_CENTER[1]], CARD_SIZE)
+
+tests="""
+mycard=Card('S','5');assert(mycard.get_suit()=='S')
+if DEBUG: print mycard
+mycard=Card('H','A');assert(mycard.get_rank()=='A')
+if DEBUG: print mycard; assert(str(mycard)=='HA')
+"""
         
 # define hand class
 class Hand:
@@ -70,10 +83,12 @@ class Hand:
         # compute the value of the hand, see Blackjack video
         value = 0
         for card in self.cards:
-            card = card_to_tuple(card)
-            value += VALUES[card[0]]
-            if card[0]=="A" and value+10 < 21:
-                 value += 10
+            #card = card_to_tuple(card.rank,card.suit) # (card)
+            value += VALUES[card.get_rank()]
+            #value += VALUES[card[0]]
+        for card in self.cards:
+            if card.get_rank()=='A' and (value+10) <= 21:
+                 value+=10
         self.value = value
 #
     def get_value(self):
@@ -82,13 +97,19 @@ class Hand:
 #   
     def draw(self, canvas, pos):
         pass	# draw a hand on the canvas, use the draw method for cards
+#
+    def __str_(self):
+        return [str(s) for s in self.cards]
 
-test="""
-myhand = Hand(); myhand.cards=[('7C'),('2S'),('5D')]; myhand.set_value(myhand.cards); assert(myhand.get_value() == 14)
-myhand = Hand(); myhand.cards=[('AH'),('2H'),('5S')]; myhand.set_value(myhand.cards); assert(myhand.get_value()  == 18)
-myhand = Hand(); myhand.cards=[('AH'),('JD')]; myhand.set_value(myhand.cards); assert(myhand.get_value() == 21)
-myhand = Hand(); myhand.cards=[('AH'),('AD')]; myhand.set_value(myhand.cards); assert(myhand.get_value() == 12)
-print myhand
+tests="""
+myhand = Hand(); myhand.cards=[Card('C','7'),Card('S','2'),Card('D','5')]; myhand.set_value(); assert(myhand.get_value() == 14)
+if DEBUG: print myhand
+myhand = Hand(); myhand.cards=[Card('H','A'),Card('H','2'),Card('S','5')]; myhand.set_value(); assert(myhand.get_value()  == 18)
+if DEBUG: print myhand
+myhand = Hand(); myhand.cards=[Card('H','A'),Card('D','J')]; myhand.set_value(); assert(myhand.get_value() == 21)
+if DEBUG: print myhand
+myhand = Hand(); myhand.cards=[Card('H','A'),Card('D','A')]; myhand.set_value(); assert(myhand.get_value() == 12)
+if DEBUG: print myhand
 """ 
 
   
