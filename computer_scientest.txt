@@ -1,0 +1,57 @@
+
+    Ada Lovelace  (10 December 1815 – 27 November 1852)
+        (Wikipedia)
+	Augusta Ada King, Countess of Lovelace , born Augusta Ada Byron and now commonly known as Ada Lovelace, was an English mathematician and writer chiefly known for her work on Charles Babbage's early mechanical general-purpose computer, the Analytical Engine. Her notes on the engine include what is recognised as the first algorithm intended to be carried out by a machine. Because of this, she is often described as the world's first computer programmer.[1][2][3]
+
+Lovelace was born 10 December 1815 as the only child of the poet Lord Byron and his wife Anne Isabella Byron.[4] All Byron's other children were born out of wedlock to other women.[5] Byron separated from his wife a month after Ada was born and left England forever four months later, eventually dying of disease in the Greek War of Independence when Ada was eight years old. Ada's mother remained bitter at Lord Byron and promoted Ada's interest in mathematics and logic in an effort to prevent her from developing what she saw as the insanity seen in her father, but Ada remained interested in him despite this (and was, upon her eventual death, buried next to him at her request).
+
+Ada described her approach as "poetical science"[6] and herself as an "Analyst (& Metaphysician)".[7] As a young adult, her mathematical talents led her to an ongoing working relationship and friendship with fellow British mathematician Charles Babbage, and in particular Babbage's work on the Analytical Engine. Between 1842 and 1843, she translated an article by Italian military engineer Luigi Menabrea on the engine, which she supplemented with an elaborate set of notes of her own, simply called Notes. These notes contain what many consider to be the first computer program—that is, an algorithm designed to be carried out by a machine. Lovelace's notes are important in the early history of computers. She also developed a vision on the capability of computers to go beyond mere calculating or number-crunching while others, including Babbage himself, focused only on those capabilities.[8] Her mind-set of "poetical science" led her to ask basic questions about the Analytical Engine (as shown in her notes) examining how individuals and society relate to technology as a collaborative tool
+
+    Alan Turing( 23 June 1912 – 7 June 1954)
+	(wikipedia)
+	Alan Mathison Turing, OBE, FRS (/ˈtjʊərɪŋ/ TEWR-ing;  was a British mathematician, logician, cryptanalyst, philosopher, pioneering computer scientist, mathematical biologist, and marathon and ultra distance runner. He was highly influential in the development of computer science, providing a formalisation of the concepts of "algorithm" and "computation" with the Turing machine, which can be considered a model of a general purpose computer.[2][3][4] Turing is widely considered to be the father of theoretical computer science and artificial intelligence.[5]
+
+During World War II, Turing worked for the Government Code and Cypher School (GC&CS) at Bletchley Park, Britain's codebreaking centre. For a time he led Hut 8, the section responsible for German naval cryptanalysis. He devised a number of techniques for breaking German ciphers, including improvements to the pre-war Polish bombe method, an electromechanical machine that could find settings for the Enigma machine. Winston Churchill said that Turing made the single biggest contribution to Allied victory in the war against Nazi Germany.[6] Turing's pivotal role in cracking intercepted coded messages enabled the Allies to defeat the Nazis in several crucial battles. It has been estimated that Turing's work shortened the war in Europe by as many as two to four years.[7]
+
+After the war, he worked at the National Physical Laboratory, where he designed the ACE, among the first designs for a stored-program computer. In 1948 Turing joined Max Newman's Computing Laboratory at Manchester University, where he assisted development of the Manchester computers[8] and became interested in mathematical biology. He wrote a paper on the chemical basis of morphogenesis, and predicted oscillating chemical reactions such as the Belousov–Zhabotinsky reaction, first observed in the 1960s.
+
+Turing was prosecuted for homosexuality in 1952, when such acts were still criminalised in the UK. He accepted treatment with oestrogen injections (chemical castration) as an alternative to prison. Turing died in 1954, 16 days before his 42nd birthday, from cyanide poisoning. An inquest determined his death a suicide; his mother and some others believed it was accidental.[9] On 10 September 2009, following an Internet campaign, British Prime Minister Gordon Brown made an official public apology on behalf of the British government for "the appalling way he was treated." The Queen granted him a posthumous pardon on 24 December 2013.[10][11]
+        
+    Grace Hopper  (December 9, 1906 – January 1, 1992
+	(Wikipedia)
+         Grace Murray Hopper ) was an American computer scientist and United States Navy rear admiral.[1] A pioneer in the field, she was one of the first programmers of the Harvard Mark I computer, and invented the first compiler for a computer programming language.[2][3][4][5][6] She popularized the idea of machine-independent programming languages, which led to the development of COBOL, one of the first high-level programming languages. She is credited with popularizing the term "debugging" for fixing computer glitches (inspired by an actual moth removed from the computer). Owing to the breadth of her accomplishments and her naval rank, she is sometimes referred to as "Amazing Grace".[7][8] The U.S. Navy destroyer USS Hopper (DDG-70) is named for her, as was the Cray XE6 "Hopper" supercomputer at NERSC.
+
+    Charles Babbage (26 December 1791 – 18 October 1871)
+	(wikipedia)
+	Charles Babbage, FRS (/ˈbæbɪdʒ/;  was an English polymath.[1] He was a mathematician, philosopher, inventor and mechanical engineer, who is best remembered now for originating the concept of a programmable computer. Considered a "father of the computer",[2] Babbage is credited with inventing the first mechanical computer that eventually led to more complex designs. His varied work in other fields has led him to be described as "pre-eminent" among the many polymaths of his century.[1] Parts of Babbage's uncompleted mechanisms are on display in the London Science Museum. In 1991, a perfectly functioning difference engine was constructed from Babbage's original plans. Built to tolerances achievable in the 19th century, the success of the finished engine indicated that Babbage's machine would have worked.
+
+
+    John von Neumann (December 28, 1903 – February 8, 1957)
+	(Wikipedia)
+	John von Neumann (/vɒn ˈnɔɪmən/;  was a Hungarian and American pure and applied mathematician, physicist, inventor and polymath. He made major contributions to a number of fields,[2] including mathematics (foundations of mathematics, functional analysis, ergodic theory, geometry, topology, and numerical analysis), physics (quantum mechanics, hydrodynamics, and fluid dynamics), economics (game theory), computing (Von Neumann architecture, linear programming, self-replicating machines, stochastic computing), and statistics.[3] He was a pioneer of the application of operator theory to quantum mechanics, in the development of functional analysis, a principal member of the Manhattan Project and the Institute for Advanced Study in Princeton (as one of the few originally appointed), and a key figure in the development of game theory[2][4] and the concepts of cellular automata,[2] the universal constructor, and the digital computer.
+
+Von Neumann's mathematical analysis of the structure of self-replication preceded the discovery of the structure of DNA.[5] In a short list of facts about his life he submitted to the National Academy of Sciences, he stated "The part of my work I consider most essential is that on quantum mechanics, which developed in Göttingen in 1926, and subsequently in Berlin in 1927–1929. Also, my work on various forms of operator theory, Berlin 1930 and Princeton 1935–1939; on the ergodic theorem, Princeton, 1931–1932." Along with Hungarian-born American theoretical physicist Edward Teller and Polish mathematician Stanislaw Ulam, von Neumann worked out key steps in the nuclear physics involved in thermonuclear reactions and the hydrogen bomb.
+
+Von Neumann wrote 150 published papers in his life; 60 in pure mathematics, 20 in physics, and 60 in applied mathematics. His last work, an unfinished manuscript written while in the hospital and later published in book form as The Computer and the Brain, gives an indication of the direction of his interests at the time of his death.
+
+
+    Donald Knuth (born January 10, 1938, present)
+	(Wikipedia)
+	Donald Ervin Knuth (/kəˈnuːθ/[1] kə-NOOTH;  is an American computer scientist, mathematician, and Professor Emeritus at Stanford University.[2]
+
+He is the author of the multi-volume work The Art of Computer Programming.[3] Knuth has been called the "father of the analysis of algorithms".[4] He contributed to the development of the rigorous analysis of the computational complexity of algorithms and systematized formal mathematical techniques for it. In the process he also popularized the asymptotic notation. In addition to fundamental contributions in several branches of theoretical computer science, Knuth is the creator of the TeX computer typesetting system, the related METAFONT font definition language and rendering system, and the Computer Modern family of typefaces.
+
+As a writer and scholar,[5] Knuth created the WEB and CWEB computer programming systems designed to encourage and facilitate literate programming, and designed the MIX/MMIX instruction set architectures. As a member of the academic and scientific community, Knuth is strongly opposed to the policy of granting software patents.[6] He has expressed his disagreement directly to both the United States Patent and Trademark Office and European Patent Organization.[7]
+
+
+	George Boole (November 1815 – 8 December 1864)
+	(wikipedia)
+	(/ˈbuːl/; 2  was an English mathematician, philosopher and logician. He worked in the fields of differential equations and algebraic logic, and is now best known as the author of The Laws of Thought. Boole said,
+
+    ... no general method for the solution of questions in the theory of probabilities can be established which does not explicitly recognise ... those universal laws of thought which are the basis of all reasoning ...[1]
+
+	Alonzo Church (June 14, 1903 – August 11, 1995) 
+	(WIKIPEDIA)
+	American mathematician and logician who made major contributions to mathematical logic and the foundations of theoretical computer science. He is best known for the lambda calculus, Church–Turing thesis, proving the undecidability of the Entscheidungsproblem, Frege–Church ontology, and the Church–Rosser theorem.
+
+
